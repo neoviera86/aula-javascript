@@ -8,14 +8,34 @@
 
 	<script>
        
-       function acionaCampo() {
+       var arrCount = Array() // Initialize array to get textbox values.
+
+       function changeFocus() {
            document.getElementById('campo').style.background = 'yellow'
+       }
+
+       /**
+        * Add number to array.
+        */
+       function addToArray(){
+           let number = document.getElementById('campo').value           
+            arrCount.push(number)
+       }
+       
+       /**
+        * Show text inside textbox.
+       */ 
+       function ShowOnTextArea(){           
+           let textArea = document.getElementById('area')
+           for (let index = 0; index < arrCount.length; index++) {
+               textArea.value += arrCount[index] + '\\\n'
+            }
        }
 
        function validaCampo() {
            let valorCampo = document.getElementById('campo').value
 
-           if (valorCampo.length < 3) {
+           if (valorCampo.length < 3 ) {
             document.getElementById('campo').style.background = 'red' 
 
            } else {
@@ -27,7 +47,13 @@
 </head>
 <body>
 
-    <input id="campo" type="text" onfocus="acionaCampo()" onblur="validaCampo()" />
-   
+    <div>
+        <input id="campo" type="text" onfocus="changeFocus()" onblur="validaCampo()" />    
+        <button id="add-array" type="button" onclick="addToArray()" >Adicionar</button>
+        <button id="campo" type="button" onclick="ShowOnTextArea()">Mostrar</button>
+    </div>
+    <div>
+        <textarea style="width:250px;height:150px" name="text-area" id="area" cols="1" rows="50"></textarea>
+    </div>
 </body>
 </html>
