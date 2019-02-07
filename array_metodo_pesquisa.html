@@ -1,0 +1,71 @@
+
+Analisa meu código.
+Evanderson Vasconcelos · Aula 202 · há 3 meses
+<!DOCTYPE html>
+
+<head>
+
+      <title>Array</title>
+
+      <meta charset="UTF-8">
+
+      <script>
+
+         var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+         function campo_texto(){
+
+            var vazio = document.getElementById('texto').value
+
+            document.getElementById('texto').value = ''
+
+            if(vazio.length == 0){
+
+               alert('Informe um valor válido')
+
+            }else{
+
+               var pesquisa = objetos.indexOf(vazio)
+
+               if(pesquisa === -1){
+
+                  objetos.push(vazio)
+
+                  console.log(vazio + ' foi adicionado no array')
+
+                  console.log(objetos)
+
+               }else{
+
+                  alert('Objeto já foi adicionado')
+
+               }
+
+            }
+
+         }
+
+         function ordena_array(){
+
+            objetos.sort()
+
+            console.log(objetos)
+
+         }
+
+
+      </script>
+
+</head>
+
+<body>
+
+  <input id="texto" type="text" placeholder="Insira um objeto:">
+
+  <button type="button" onclick="campo_texto()">Adicionar</button>
+
+  <button type="button" onclick="ordena_array()">Ordenar</button>
+
+</body>
+
+</html>

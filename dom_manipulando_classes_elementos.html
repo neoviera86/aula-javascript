@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Dom estilos</title>
+
+    <style>
+        .estilo1 {
+            background: #0000ff;
+            color: #fff;
+        }
+
+        .estilo2 {
+            width: 400px;
+            height: 50px;
+            background-color: #0000ff;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+        }
+    
+    </style>
+    
+    <script>
+        
+        function modificaClasse() {
+            document.getElementById('mensagem').className = 'estilo2'
+        }
+    </script>
+	
+</head>
+<body>
+
+    <div id="mensagem" class="estilo1">Modificando a Classe do Elemento</div>
+    <hr />
+    <button type="botton" onclick="modificaClasse()">Aplicar Classe</button>
+
+</body>
+</html>  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calcular Massa Corporal</title>
+	<script>
+
+			//recebe os parametros da pessoa
+			var nome = prompt('Digite seu nome:')
+			var altura = prompt('Digite sua altura em centimetros:')
+			var peso = prompt('Digite seu peso em Kg:')
+
+			//converte as cadeias de caracteres para o tipo float
+			altura = parseFloat(altura) 
+			peso = parseFloat(peso)
+
+			//abaixo é feito a conversão da altura de centimetros para mettros
+			altura = altura / 100
+
+			//realiza o cálculo de IMC
+			var imc = peso / (altura * altura)
+
+			//testes condicionais para identificar a classificação do peso com base no imc
+			var classificacao = ''
+
+
+			//Classificação de nivel de IMC
+			if(imc < 16) {
+				classificacao = 'Baixo peso, muito grave'
+			
+			} else if(imc >= 16 && imc <= 16.99) {
+				classificacao = 'Baixo peso, grave'
+			
+			} else if(imc >= 17 && imc<= 18.49) {
+				classificacao = 'Baixo peso'
+			
+			} else if(imc >= 18.50 && imc <= 24.99) {
+				classificacao = 'Peso normal'
+			
+			} else if(imc >= 25 && imc <= 29.99) {
+				classificacao = 'Sobrepeso'
+			
+			} else if(imc >= 30 && imc <= 34.99) {
+				classificacao = 'Obesidade grau I'
+			
+			} else if(imc >= 35 && imc <= 39.99) {
+				classificacao = 'Obesidade grau II'
+			
+			} else {//Se não estiver enquadrado em nunhuma classificação anteior o IMC será maior que 40
+				classificacao = 'Obesidade grau III'
+			}
+
+
+
+			document.write(nome + ' possui o indice de massa corporal igual a ' + imc + ' sendo classificado como: ' + classificacao);
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

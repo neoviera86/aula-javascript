@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Exercicio Array </title>
+
+	<script>
+
+        var objeto = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionarObjetos() {
+            objeto.put(document.getElementById('objeto').value)
+
+            document.getElementById('texto').value = ''
+            
+            if (objeto != '') {
+                alert('Informe um valor válido')
+            }
+        }
+        
+    
+	</script>
+</head>
+<body>
+
+    <input id="objeto" type="text" placeholder="Nome do objeto" />
+
+    <button onclick="adicionarObjetos()">Adicionar</button>
+
+    <button onclick="ordenarObjetos()">Ordenar</button>
+	
+</body>
+</html>
+ 
