@@ -1,71 +1,55 @@
-
-Analisa meu código.
-Evanderson Vasconcelos · Aula 202 · há 3 meses
 <!DOCTYPE html>
-
+<html>
 <head>
+	<meta charset="utf-8">
+    <title>Array</title>
+    <style>
 
-      <title>Array</title>
-
-      <meta charset="UTF-8">
-
-      <script>
-
-         var objetos = Array('Cadeira', 'Impressora', 'Garfo')
-
-         function campo_texto(){
-
-            var vazio = document.getElementById('texto').value
-
-            document.getElementById('texto').value = ''
-
-            if(vazio.length == 0){
-
-               alert('Informe um valor válido')
-
-            }else{
-
-               var pesquisa = objetos.indexOf(vazio)
-
-               if(pesquisa === -1){
-
-                  objetos.push(vazio)
-
-                  console.log(vazio + ' foi adicionado no array')
-
-                  console.log(objetos)
-
-               }else{
-
-                  alert('Objeto já foi adicionado')
-
-               }
-
-            }
-
-         }
-
-         function ordena_array(){
-
-            objetos.sort()
-
-            console.log(objetos)
-
-         }
-
-
-      </script>
-
+    </style>
+	
 </head>
-
 <body>
+    <input id="entrada" type="text" placeholder="Digite aqui"/>
 
-  <input id="texto" type="text" placeholder="Insira um objeto:">
-
-  <button type="button" onclick="campo_texto()">Adicionar</button>
-
-  <button type="button" onclick="ordena_array()">Ordenar</button>
-
+    <button type="text" onclick="adicionarObjetos()">Adicinar</button>
+    <button type="text" onclick="ordenarObjetos()">Ordenar</button>
 </body>
+
+<script>
+
+    var objetos = Array('cadeira', 'impressora', 'garfo')
+
+        function adicionarObjetos() {
+
+            var area = document.getElementById('entrada').value
+
+            document.getElementById('entrada').value = ''
+
+            if (area.length == 0) {
+
+                alert('Informe um valor válido')
+
+            }else {
+
+               var pesquisa = objetos.indexOf(area) 
+
+               if (pesquisa === -1) {
+                   
+                   objetos.push(area)
+
+                   console.log(area + ' foi adicionado ao array')
+
+                   console.log(objetos)
+               }else {
+                   alert('Objeto já foi incluido')
+               }
+            }
+        }
+        function ordenarObjetos() {
+            objetos.sort()
+            console.log(objetos)
+        }
+   
+ </script>
 
 </html>

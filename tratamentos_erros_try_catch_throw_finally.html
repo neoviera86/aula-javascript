@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+
+<head>
+
+      <title>Array</title>
+
+      <meta charset="UTF-8"> 
+
+</head>
+
+<body>
+  
+
+</body>
+
+<script>
+    
+    //Netflix
+
+    
+
+    var video = Array()
+
+    video[1] = Array()
+    video[1]['nome'] = 'Fullmetal Alchemist'
+    video[1]['categoria'] = 'Anime'
+
+    function getVideo(video) {
+
+
+        //A implementação do metodo try, que é um bloco de códigos, nos permite fazer um tratamento.
+        //Adicionando dentro do try, toda a codificão passivel de apresentar erro, deve ser incluida dentro do try. 
+        try {
+        //logica
+        //http
+        //Podemos usar quantos try's quanto necessário
+        console.log(video[0]['nome'])
+
+        }catch(erro) {
+        //este (erro) que vem como parametro do catch, pode ser qualquer parametro que respeite as regras de atribuição;
+        //neste caso (erro) é o parametro que representa o erro no caso em questão.
+        //O catch tem a função de receber o ERRO e explorar o msm tomando uma ação corretiva.
+        tratarErro(erro)
+        console.log('Agora sim podemos tratar esse erro')//podemos agir de forma criativa para resolver o erro, podendo imprimir uma mensagem 'o serviço não este disponivel por enquanto... 
+
+        //O throw serve para lançar excessões, forçar o erro e parar o programa, podendo inserir uma mensagem como a que vemos a seguir;
+        //E é mais usado após o metodo catch, para mostrar as origens dos erros a equipe de desenvolvimento.
+        throw new Error('Não se preocupe, estamos trabalhando nisso agora!!')
+
+
+        //Após (tentar alguma coisa "try", e (tomar uma ação corretiva com "catch"), vamos (finalizar esta ação com "finally"))
+        }finally {
+            console.log('Sempre passa por aqui (try / catch)')
+        }
+
+        console.log('A aplicação não morreu')
+    }
+
+    //Podemos ter uma função que recebe o parametro (e):erro que relata o erro para a equipe de desenvolvimento
+    function tratarErro(e) {
+        //lógica para registrar o erro no servidor
+        console.log(e)
+    }
+
+    getVideo(video)
+  
+</script>
+
+</html>

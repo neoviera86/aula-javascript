@@ -6,7 +6,7 @@
     <title>JavaScript</title>
     <script> 
 
-        function soma (a, b) {
+        /*function soma (a, b) {
             return a + b
         }   
 
@@ -14,6 +14,20 @@
         console.log(soma(7, 7, 9, 15)) //desconcidera os parametros adicionais
         console.log(soma(7))//return = NaN (not a number)
         console.log()//tbm retorna NaN
+        */
+
+       function soma() {
+           var resultado = 0
+           for (var i in arguments) {
+               resultado += arguments [i]
+                   
+               }
+               return resultado
+           }
+          
+     
+       console.log(soma(7,5,3.2,8,' Neilson'))
+       
 
     </script>
 </head>
